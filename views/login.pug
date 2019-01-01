@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-xs-12.col-md-8
+        form(method='POST' action='/login')
+          div.form-group
+            label(for="email") Email
+            input.form-control#email(name="email" type="email" placeholder="Enter Email")
+          div.form-group
+            label(for="password") Password
+            input.form-control#password(name="password" type="password" placeholder="Enter Password")
+          button.btn.btn-primary(type="submit") Log in
