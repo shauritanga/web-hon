@@ -40,3 +40,9 @@
 hr {
     height: 2px;;
 }
+.footer{
+    margin-top: .5em;
+    background-color: #ccc;
+    padding-top: 1.5em;
+    height: 3em;
+}
