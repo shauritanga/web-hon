@@ -5,7 +5,7 @@ const router = express.Router();
 
 // GET home page
 router.get('/', function(req, res, next) {
-  return res.render('home', {title: 'Science Teachers Accossiation of Tanzania'})
+  return res.render('home', {title: 'Educate the World'})
 });
 
 //GET profile
@@ -20,7 +20,6 @@ router.get('/profile', function(req, res, next) {
         if(error){
           return next(error);
         } else {
-          console.log(user.firstName)
           return res.render('profile', {
             title: 'User Profile',
             firstName: user.firstName,
