@@ -1,10 +1,10 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const session = require('express-session');
-const routes = require('./routes/index');
-const app = express();
-const port = process.env.PORT || 5000,
-url = process.env.DATABASEURL || 'mongodb://localhost:27017/learn_forever';
+const express        = require('express'),
+      mongoose       = require('mongoose'),
+      session        = require('express-session'),
+      routes         = require('./routes/index'),
+      app            = express(),
+      port           = process.env.PORT || 5000,
+      url            = process.env.DATABASEURL || 'mongodb://localhost:27017/learn_forever';
 
 
 
