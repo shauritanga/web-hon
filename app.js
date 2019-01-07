@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const routes = require('./routes/index');
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000,
+url = process.env.DATABASEURL || 'mongodb://localhost:27017/learn_forever';
 
 
 
@@ -20,7 +21,7 @@ app.use(function(req, res, next) {
   next();
 });
 //connecting to // DB
-mongoose.connect('mongodb://ashauritanga:athanas2015@ds139879.mlab.com:39879/learn-forever',{ useNewUrlParser: true});
+mongoose.connect(url,{ useNewUrlParser: true});
 let db = mongoose.connection;
 //mongo error
 db.on('error', console.error.bind(console, 'connection failed:'));
